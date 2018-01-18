@@ -11,7 +11,7 @@
 ## Install
 
 ```bash
-go get -u github.com/miguelmota/go-coinmarketcap
+go get -u github.com/dmavrin/go-coinmarketcap
 ```
 
 ## Examples

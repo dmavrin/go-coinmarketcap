@@ -8,6 +8,7 @@ type Coin struct {
 	Rank             int     `json:"rank,string"`
 	PriceUsd         float64 `json:"price_usd,string"`
 	PriceBtc         float64 `json:"price_btc,string"`
+	PriceEur         float64 `json:"price_eur,string"`
 	Usd24hVolume     float64 `json:"24h_volume_usd,string"`
 	MarketCapUsd     float64 `json:"market_cap_usd,string"`
 	AvailableSupply  float64 `json:"available_supply,string"`

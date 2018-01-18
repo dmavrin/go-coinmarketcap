@@ -19,8 +19,8 @@ var (
 )
 
 // GetMarketData get information about the global market data of the cryptocurrencies
-func GetMarketData() (GlobalMarketData, error) {
-	url = fmt.Sprintf(baseURL + "/global/")
+func GetMarketData(convert string) (GlobalMarketData, error) {
+	url = fmt.Sprintf(baseURL+"/global/?convert=%s", strings.ToUpper(convert))
 
 	resp, err := makeReq(url)
 
@@ -34,8 +34,8 @@ func GetMarketData() (GlobalMarketData, error) {
 }
 
 // GetCoinData get information about a crypto currency
-func GetCoinData(coin string) (Coin, error) {
-	url = fmt.Sprintf("%s/ticker/%s", baseURL, coin)
+func GetCoinData(coin, convert string) (Coin, error) {
+	url = fmt.Sprintf("%s/ticker/%s?convert=%s", baseURL, coin, strings.ToUpper(convert))
 	resp, err := makeReq(url)
 	if err != nil {
 		return Coin{}, err
